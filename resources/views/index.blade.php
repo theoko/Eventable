@@ -4,7 +4,13 @@
 
 @section('content')
 
-<script>
+<div id="map"></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+       initMap(); 
+    });
+    
     //Create map variable
     var map;
     //Array of markers
