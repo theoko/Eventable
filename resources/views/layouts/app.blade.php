@@ -10,6 +10,14 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         <link rel="stylesheet" href="{{ asset('css/nav.css') }}">
+        
+        <!-- Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+              rel="stylesheet">
+              
+        <!-- Google Maps API-->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBilq2fbOo2RtuvZSD6P54cGpW-TKcW4mM&callback=initMap"
+                async defer></script>
     </head>
     <body>
         <div id="mySidenav" class="sidenav">
@@ -17,15 +25,27 @@
             <div id="logo">
                 <a href="{{ route('home') }}" class="text-light">{{ config('app.name', 'Laravel') }}</a>
             </div>
-            <a href="#"><svg viewBox="0 0 8 8"><use xlink:href="#plus"></use></svg></a>
-            <a href="#">Category2</a>
-            <a href="#">Category3</a>
-            <a href="#">Category4</a>
+            <a href="#">Food</a>
+            <a href="#">Drinks</a>
+            <a href="#">Music</a>
+            <a href="#">Kid Friendly</a>
         </div>
 
         <div id="main">
             <span style="font-size:30px;cursor:pointer" onclick="openNav()" id="opennav">&#9776;</span>
             @yield('content')
+            
+            <div class="top-right">
+                <a href="{{ route('calendar.home') }}" class="btn btn-primary btn-lg">
+                    <i class="material-icons" style="font-size: 30px">date_range</i>
+                </a>
+            </div>
+            
+            <div class="bottom-right">
+                <a href="{{ route('add.event') }}" class="btn btn-primary btn-lg">
+                    <i class="material-icons" style="font-size: 30px">plus_one</i>
+                </a>
+            </div>
         </div>
 
             <!-- End Form Code -->

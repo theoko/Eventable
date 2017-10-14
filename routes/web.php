@@ -20,3 +20,13 @@ Route::get('/add', [
    'uses' => 'Frontend\FrontendController@addEvent',
     'as' => 'add.event',
 ]);
+
+Route::post('/add/submit', [
+    'uses' => 'Backend\BackendController@submitEvent',
+    'as' => 'submit.event',
+]);
+
+Route::get('/calendar', [
+    'uses' => 'Frontend\FrontendController@showCalendar',
+    'as' => 'calendar.home'
+]);

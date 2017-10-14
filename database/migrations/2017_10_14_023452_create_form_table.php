@@ -20,7 +20,7 @@ class CreateFormTable extends Migration
             $table->string('orgname'); // The name of the organization
             $table->string('address', 255); // The address of the event
             $table->text('description'); // The description of the event
-            $table->dateTime('date'); // The event date
+            $table->timestamp('date'); // The event date
             $table->timestamps();
         });
     }

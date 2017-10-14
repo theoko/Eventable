@@ -24,6 +24,18 @@ body {
     transition: 0.3s;
 }
 
+.bottom-right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.top-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
 .sidenav #logo {
     position: absolute;
     top: 5px;
