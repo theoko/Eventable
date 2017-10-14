@@ -39,6 +39,8 @@ class BackendController extends Controller
             $event->type = $event_categories;
             
             $event->save();
+            
+            return redirect()->route('add.event')->with('status', 'Event added!');
         } else {
             return redirect()->route('add.event');
         }

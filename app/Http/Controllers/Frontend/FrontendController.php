@@ -8,12 +8,17 @@ use App\Events\DB;
 
 class FrontendController extends Controller
 {
+    public function __construct() {
+        $this->db = new DB;
+    }
+    
     public function home() {
-//        $db = new DB;
         
 //        var_dump($db->getCategories());
         
-        return view('index');
+        $locations = $this->db->getLocations();
+        
+        return view('index', ['locations' => $locations]);
     }
     
     public function addEvent() {

@@ -19,4 +19,8 @@ class DB {
         
     }
     
+    public function getLocations() {
+        return Event::all();
+    }
+    
 }
