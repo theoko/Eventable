@@ -15,3 +15,8 @@ Route::get('/', [
     'uses' => 'Frontend\FrontendController@home',
     'as' => 'home',
 ]);
+
+Route::get('/add', [
+   'uses' => 'Frontend\FrontendController@addEvent',
+    'as' => 'add.event',
+]);

@@ -16,6 +16,7 @@ class CreateFormTable extends Migration
         Schema::create('form', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name'); // The name of the event
+            $table->string('type'); // The category of the event
             $table->string('orgname'); // The name of the organization
             $table->string('address', 255); // The address of the event
             $table->text('description'); // The description of the event

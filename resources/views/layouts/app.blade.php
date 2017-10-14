@@ -13,18 +13,22 @@
     </head>
     <body>
         <div id="mySidenav" class="sidenav">
-            <a href="{{ route('home') }}">{{ config('app.name', 'Laravel') }}</a>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">Category1</a>
+            <div id="logo">
+                <a href="{{ route('home') }}" class="text-light">{{ config('app.name', 'Laravel') }}</a>
+            </div>
+            <a href="#"><svg viewBox="0 0 8 8"><use xlink:href="#plus"></use></svg></a>
             <a href="#">Category2</a>
             <a href="#">Category3</a>
             <a href="#">Category4</a>
         </div>
 
         <div id="main">
-            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()" id="opennav">&#9776;</span>
             @yield('content')
         </div>
+
+            <!-- End Form Code -->
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->

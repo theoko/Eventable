@@ -24,6 +24,11 @@ body {
     transition: 0.3s;
 }
 
+.sidenav #logo {
+    position: absolute;
+    top: 5px;
+}
+
 .sidenav a:hover {
     color: #f1f1f1;
 }
@@ -34,6 +39,16 @@ body {
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+}
+
+#submit_btn {
+
+    margin: auto;
+    /*right: 80%;*/
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #main {

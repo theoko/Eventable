@@ -10,4 +10,8 @@ class FrontendController extends Controller
     public function home() {
         return view('index');
     }
+    
+    public function addEvent() {
+        return view('add');
+    }
 }
