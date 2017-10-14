@@ -84,7 +84,7 @@ function initMap() {
 
 <script type="text/javascript">
     $(document).ready(function() {
-       $('closebtn').hide();
+       $('.closebtn').hide();
        $('body').attr('onload', 'initMap()');
     });
 </script>
